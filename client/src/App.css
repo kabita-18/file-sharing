@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+  background: black;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+img{
+  width: 30%;
+}
+.wrapper{
+  
+  background-color: white;
+  width: 500px;
+  height: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1{
+  font-size: 40px;
+  font-weight: 600;
+  color: rgb(64, 64, 167);
+  margin: 40px 0;
+}
+button{
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  background-color:  rgb(64, 64, 167);
+  border: 1px solid  rgb(64, 64, 167);
+  color: white;
+  font-size: 20px;
+  margin: 30px 0;
+}
