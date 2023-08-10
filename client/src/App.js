@@ -1,6 +1,7 @@
 import {useRef , useState, useEffect} from 'react'
 import './App.css';
 import { uploadFile } from './services/api';
+
 function App() {
 
   const [file, setfile]= useState('');
@@ -17,12 +18,18 @@ function App() {
         data.append("name", file.name);
         data.append("file", file);
 
-        let response = await uploadFile(data);
-        setResult(response.path);
+        try {
+          let response = await uploadFile(data);
+          setResult(response.path);
+        } catch (error) {
+          console.error("Error while uploading:", error.message);
+          // setResult("Upload failed"); // Update the result state if there's an error
+        }
       }
     }
     getImage();
   }, [file])
+
   function onUpload(){
     fileInputRef.current.click();
   }

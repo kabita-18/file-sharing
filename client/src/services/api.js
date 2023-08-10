@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+// const API_URL = 'https://file-sharing-app-6875d-default-rtdb.firebaseio.com/';
 const API_URL = 'http://localhost:8000';
 
 export const uploadFile = async(data) =>{
